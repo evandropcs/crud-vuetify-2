@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import taskapi from '@/tasksapi.js'
+import TasksApi from '@/tasksapi.js'
+
 export default {
   data: () => {
     return {
@@ -26,7 +27,7 @@ export default {
   },
   methods: {
     createTask() {
-      taskapi.postTask(this.newTask)
+      TasksApi.postTask(this.newTask)
     },
   },
 }

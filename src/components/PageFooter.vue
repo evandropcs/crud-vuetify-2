@@ -11,7 +11,12 @@
         <strong>{{ version }}</strong> -
         {{ nodeEnv }}
         <p>
-          <v-btn icon color="white" href="">
+          <v-btn
+            icon
+            color="white"
+            href="https://github.com/evandropcs/crud-vuetify"
+            target="blank"
+          >
             <v-icon>fa-brands fa-github</v-icon>
           </v-btn>
         </p>

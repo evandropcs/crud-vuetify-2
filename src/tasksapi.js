@@ -15,7 +15,16 @@ export default {
   },
   // Salva nova tarefa
   postTask: (task) => {
-    axios.post('/tasks', task)
+    return new Promise((resolve, reject) => {
+      axios
+        .post('/tasks', task)
+        .then((response) => {
+          return resolve(response.data)
+        })
+        .catch((error) => {
+          return reject(error)
+        })
+    })
   },
   // Deleta tarefa
   deleteTasks: (taskId) => {
