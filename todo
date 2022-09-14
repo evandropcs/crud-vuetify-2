@@ -1,0 +1,15 @@
+VUETIFY
+
+- vue create
+- vue add vuetify
+- .prettierrc.js
+- adicionar fontawesome, `npm install @fortawesome/fontawesome-free -D` e alterar vuetify.js
+  https://vuetifyjs.com/en/features/icon-fonts/#font-awesome-5-icons
+
+  "liveServer.settings.ignoreFiles": [
+  ".vscode/**",
+  "**/*.scss",
+  "**/*.sass",
+  "**/*.ts",
+  "**/*.json"
+  ],
