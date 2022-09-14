@@ -6,9 +6,9 @@
     <v-btn x-large rounded color="primary" dark @click="createTask">
       Criar
     </v-btn>
-    <v-btn x-large rounded color="primary" dark :to="{ name: 'taskList' }">
+    <!-- <v-btn x-large rounded color="primary" dark :to="{ name: 'taskList' }">
       Listar tarefas
-    </v-btn>
+    </v-btn> -->
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
   methods: {
     createTask() {
       TasksApi.postTask(this.newTask)
+      this.$router.push({ name: 'taskList' })
     },
   },
 }
