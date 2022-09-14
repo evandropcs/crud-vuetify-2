@@ -16,7 +16,7 @@
                   <v-btn x-small icon color="grey"
                     ><v-icon>fas fa-pen fa-xs</v-icon></v-btn
                   >
-                  <v-btn x-small icon color="grey"
+                  <v-btn x-small icon color="grey" @click="deletarTasks(task)"
                     ><v-icon>far fa-trash-alt fa-xs</v-icon></v-btn
                   >
                 </v-row>
@@ -47,6 +47,11 @@ export default {
     listarTarefas() {
       TasksApi.getTasks((data) => {
         this.tasks = data
+      })
+    },
+    deletarTasks(task) {
+      TasksApi.deleteTasks(task.id).then(() => {
+        this.listarTarefas()
       })
     },
   },

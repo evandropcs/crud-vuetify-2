@@ -3,7 +3,12 @@
     <v-text-field v-model="newTask.title" label="Title"></v-text-field>
     <v-text-field v-model="newTask.project" label="Project"></v-text-field>
     <v-text-field v-model="newTask.dueTo" label="Dueto"></v-text-field>
-    <button @click="createTask">Criar</button>
+    <v-btn x-large rounded color="primary" dark @click="createTask">
+      Criar
+    </v-btn>
+    <v-btn x-large rounded color="primary" dark :to="{ name: 'taskList' }">
+      Listar tarefas
+    </v-btn>
   </div>
 </template>
 
