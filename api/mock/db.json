@@ -3,20 +3,14 @@
     {
       "id": 1,
       "title": "Estudar Flexbox",
-      "dueTo": "2022-05-01",
+      "dueTo": "2022-10-22",
       "project": "Estudos"
     },
     {
       "id": 2,
       "title": "Estudar Float",
-      "dueTo": "2022-05-01",
+      "dueTo": "2022-09-30",
       "project": "Estudos"
-    },
-    {
-      "title": "Rodar Projeto",
-      "project": "Trabalho",
-      "dueTo": "2022-09-15",
-      "id": 3
     }
   ],
   "projects": [

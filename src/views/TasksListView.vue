@@ -1,11 +1,10 @@
 <template>
-  <v-main class="overflow-hidden mt-4">
+  <v-main class="overflow-hidden mt-2">
     <v-container>
       <v-row>
         <v-col class="pa-1" cols="12" v-for="task in tasks" :key="task.id">
           <v-card>
             <v-card-text>
-              <div>#{{ task.id }}</div>
               <p class="ma-0 pa-0 text-h5 text--primary">{{ task.title }}</p>
               <p class="ma-0 pa-0 text-h5 text--primary">{{ task.project }}</p>
               <p class="ma-0 pa-0 text-h5 text--primary">{{ task.dueTo }}</p>
@@ -25,7 +24,7 @@
           </v-card>
         </v-col>
         <p>
-          <v-btn x-large rounded color="primary" dark :to="{ name: 'newTask' }">
+          <v-btn x-large rounded class="orange" :to="{ name: 'newTask' }">
             +
           </v-btn>
         </p>

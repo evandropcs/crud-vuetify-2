@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row class="text-center top">
       <v-col cols="12">
         <v-img
           :src="require('../assets/task.svg')"
@@ -17,7 +17,7 @@
           Lista de tarefas usando VueJS + Vuetify + API Mock
         </p>
         <p>
-          <v-btn x-large rounded class="orange" :to="{ name: 'login' }">
+          <v-btn x-large rounded class="orange" :to="{ name: 'taskList' }">
             Iniciar
           </v-btn>
         </p>
@@ -29,3 +29,9 @@
 <script>
 export default {}
 </script>
+
+<style scoped>
+.top {
+  margin-top: 40px;
+}
+</style>

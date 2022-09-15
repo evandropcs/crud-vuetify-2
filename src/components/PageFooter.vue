@@ -1,15 +1,13 @@
 <template>
-  <v-footer padless fixed>
+  <v-footer padless fixed class="tam">
     <v-row justify="center" no-gutters>
       <v-col class="secondary pt-5 text-center grey--text" cols="12">
-        Copyright® {{ new Date().getFullYear() }} — <strong>Tasks</strong>
+        Copyright® {{ new Date().getFullYear() }}
       </v-col>
       <v-col
         class="secondary pb-5 text-center grey--text text-caption"
         cols="12"
       >
-        <strong>{{ version }}</strong> -
-        {{ nodeEnv }}
         <p>
           <v-btn
             icon
@@ -35,3 +33,9 @@ export default {
   }),
 }
 </script>
+
+<style scoped>
+.tam {
+  height: 80px;
+}
+</style>

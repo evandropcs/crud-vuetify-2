@@ -1,21 +1,11 @@
 <template>
   <v-toolbar dense>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-    <v-toolbar-title>Vuetodo</v-toolbar-title>
-
+    <v-col class="pt- text-center --text" cols="5"></v-col>
+    <h1 class="center orange--text font-weight-black">To Do List</h1>
     <v-spacer></v-spacer>
 
-    <v-btn icon>
-      <v-icon>fa-solid fa-magnifying-glass</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>fa-regular fa-face-grin-hearts</v-icon>
-    </v-btn>
-
     <v-btn icon :to="{ name: 'home' }">
-      <v-icon>fa-solid fa-ellipsis-vertical</v-icon>
+      <v-icon>fa-solid fa-house</v-icon>
     </v-btn>
   </v-toolbar>
 </template>
