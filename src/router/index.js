@@ -8,6 +8,7 @@ import LoginView from '@/views/LoginView.vue'
 import PainelResumo from '@/views/PainelResumo.vue'
 import CadastrarView from '@/views/CadastrarView.vue'
 import NewTaskView from '@/views/NewTaskView.vue'
+import EditTaskView from '@/views/EditTaskView .vue'
 
 Vue.use(VueRouter)
 
@@ -75,6 +76,17 @@ const routes = [
         path: '',
         name: 'newTask',
         component: NewTaskView,
+      },
+    ],
+  },
+  {
+    path: '/editTask/:id',
+    component: PrivateLayout,
+    children: [
+      {
+        path: '',
+        name: 'editTask',
+        component: EditTaskView,
       },
     ],
   },

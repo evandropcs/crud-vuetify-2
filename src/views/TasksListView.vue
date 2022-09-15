@@ -13,7 +13,7 @@
             <v-card-actions>
               <v-list-item class="grow">
                 <v-row align="center" justify="end">
-                  <v-btn x-small icon color="grey"
+                  <v-btn x-small icon color="grey" @click="editarTasks(task)"
                     ><v-icon>fas fa-pen fa-xs</v-icon></v-btn
                   >
                   <v-btn x-small icon color="grey" @click="deletarTasks(task)"
@@ -52,6 +52,12 @@ export default {
     deletarTasks(task) {
       TasksApi.deleteTasks(task.id).then(() => {
         this.listarTarefas()
+      })
+    },
+    editarTasks(task) {
+      this.$router.push({
+        name: 'editTask',
+        params: { id: task.id, task: task },
       })
     },
   },
