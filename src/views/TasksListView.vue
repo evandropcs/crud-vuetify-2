@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import TasksApi from '@/tasksapi'
-// import TasksApi from '@/api/tasks.api.js'
+// import TasksApi from '@/tasksapi'
+import TasksApi from '@/api/tasks.api.js'
 
 export default {
   data: () => {
@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     listarTarefas() {
-      TasksApi.getTasks((data) => {
+      TasksApi.getTasks().then((data) => {
         this.tasks = data
       })
     },

@@ -49,6 +49,7 @@
 
 <script>
 import AuthApi from '@/api/auth.api.js'
+
 export default {
   data: () => {
     return {
@@ -66,8 +67,9 @@ export default {
     login() {
       this.loading = true
       AuthApi.login(this.username, this.password)
-        .then((resp) => {
-          console.log('login ok', resp)
+        .then((user) => {
+          console.log('login ok', user)
+          this.saveLoggedUser(user)
           this.$router.push({ name: 'taskList' })
         })
         .catch((error) => {
@@ -78,6 +80,10 @@ export default {
         .finally(() => {
           this.loading = false
         })
+    },
+    saveLoggedUser(user) {
+      window.localStorage.setItem('loggedUser', user.id)
+      window.localStorage.setItem('loggedUserToken', user.token)
     },
   },
 }
