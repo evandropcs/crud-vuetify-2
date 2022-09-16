@@ -17,7 +17,7 @@
           Lista de tarefas usando VueJS + Vuetify + API Mock
         </p>
         <p>
-          <v-btn x-large rounded class="orange" :to="{ name: 'taskList' }">
+          <v-btn x-large rounded class="orange" :to="{ name: 'login' }">
             Iniciar
           </v-btn>
         </p>
