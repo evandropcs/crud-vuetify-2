@@ -25,6 +25,42 @@ export default {
         })
     })
   },
+  postTask: (task) => {
+    return new Promise((resolve, reject) => {
+      api
+        .post('/api/tasks', task)
+        .then((response) => {
+          return resolve(response.data)
+        })
+        .catch((error) => {
+          return reject(error)
+        })
+    })
+  },
+  deleteTasks: (taskId) => {
+    return new Promise((resolve, reject) => {
+      api
+        .delete(`/api/tasks/${taskId}`)
+        .then((response) => {
+          return resolve(response.data)
+        })
+        .catch((error) => {
+          return reject(error)
+        })
+    })
+  },
+  editTask: (taskid, task) => {
+    return new Promise((resolve, reject) => {
+      api
+        .put(`/api/tasks/`, task)
+        .then((response) => {
+          return resolve(response.data)
+        })
+        .catch((error) => {
+          return reject(error)
+        })
+    })
+  },
   summary: () => {
     return new Promise((resolve, reject) => {
       api
