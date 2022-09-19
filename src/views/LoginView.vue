@@ -39,7 +39,6 @@
             <v-spacer
               ><v-btn color="primary" @click="login">Entrar</v-btn></v-spacer
             >
-            <v-btn color="error" :to="{ name: 'cadastrar' }">Cadastrar</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>

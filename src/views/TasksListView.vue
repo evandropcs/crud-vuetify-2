@@ -1,6 +1,6 @@
 <template>
   <v-main class="overflow-hidden mt-2">
-    <v-container>
+    <v-container class="altura">
       <v-row>
         <v-col class="pa-1" cols="12" v-for="task in tasks" :key="task.id">
           <v-card>
@@ -66,3 +66,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.altura {
+  height: 900px;
+  max-height: 100%;
+}
+</style>

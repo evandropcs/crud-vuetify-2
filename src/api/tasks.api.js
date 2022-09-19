@@ -52,19 +52,7 @@ export default {
   editTask: (taskid, task) => {
     return new Promise((resolve, reject) => {
       api
-        .put(`/api/tasks/`, task)
-        .then((response) => {
-          return resolve(response.data)
-        })
-        .catch((error) => {
-          return reject(error)
-        })
-    })
-  },
-  summary: () => {
-    return new Promise((resolve, reject) => {
-      api
-        .get('/api/tasks/summary')
+        .post(`/api/tasks/${taskid}`, task)
         .then((response) => {
           return resolve(response.data)
         })

@@ -14,10 +14,10 @@
                   v-model="newTask.project"
                   label="Project"
                 ></v-text-field>
-                <v-text-field
+                <!-- <v-text-field
                   v-model="newTask.dueTo"
                   label="Dueto"
-                ></v-text-field>
+                ></v-text-field> -->
                 <v-btn x-large rounded class="orange" @click="createTask">
                   Criar
                 </v-btn>
